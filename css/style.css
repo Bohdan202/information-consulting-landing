@@ -197,7 +197,6 @@ h3 {
 }
 
 h1 {
-    max-width: 780px;
     margin-bottom: 22px;
     font-size: clamp(2.35rem, 5vw, 4.6rem)
 }
@@ -403,7 +402,7 @@ h3 {
 }
 
 .section-dark h2 {
-    max-width: 600px
+    max-width: 700px
 }
 
 .benefit-grid {
@@ -678,6 +677,18 @@ textarea {
 
 .radio-group label {
     font-size: 14px
+}
+
+.selected-contact {
+    min-height: 24px;
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.selected-contact a {
+    color: var(--brand);
+    font-weight: 750
 }
 
 .field-hint,

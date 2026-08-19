@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#consultation-form');
   if (!form) return;
   const status = document.querySelector('#form-status');
+  const selectedContact = document.querySelector('#selected-contact');
+  const contactMethods = form.querySelectorAll('input[name="contact-method"]');
+  const showSelectedContact = (input) => {
+    if (!selectedContact || !input) return;
+    const { contactLabel, contactValue, contactHref } = input.dataset;
+    const external = contactLabel === 'Telegram' ? ' target="_blank" rel="noopener noreferrer"' : '';
+    selectedContact.innerHTML = `Для звʼязку через ${contactLabel}: <a href="${contactHref}"${external}>${contactValue}</a>`;
+  };
+  contactMethods.forEach(input => input.addEventListener('change', () => showSelectedContact(input)));
   const setError = (id, message) => { const error = document.querySelector(`#${id}-error`); const field = error?.closest('.field'); if (error) error.textContent = message; if (field) field.classList.toggle('has-error', Boolean(message)); };
   form.addEventListener('submit', event => {
     event.preventDefault();

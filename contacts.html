@@ -1,5 +1,102 @@
 <!doctype html>
-<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Контакти та заявка | ІнформКонсалт ФОП</title><meta name="description" content="Зв'яжіться для отримання інформаційної консультації: телефон, email, месенджери та форма заявки."><meta property="og:title" content="Контакти та заявка | ІнформКонсалт ФОП"><meta property="og:description" content="Залиште заявку на інформаційну консультацію у зручний спосіб."><meta property="og:type" content="website"><meta property="og:locale" content="uk_UA"><link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script></head>
-<body><a class="skip-link" href="#main-content">Перейти до основного вмісту</a><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="На головну сторінку"><span class="brand-mark" aria-hidden="true">І</span><span>ІнформКонсалт<br><small>ФОП · ІТ-консультування</small></span></a><button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button><nav class="site-nav" id="site-menu" aria-label="Основна навігація"><a href="index.html">Головна</a><a href="services.html">Послуги</a><a class="is-active" href="contacts.html" aria-current="page">Контакти</a><a class="button button-small" href="#form">Консультація</a></nav></div></header>
-<main id="main-content"><section class="page-hero"><div class="container narrow"><p class="eyebrow">Контакти</p><h1>Звʼяжіться, щоб обговорити ваше питання</h1><p class="lead">Оберіть зручний канал або заповніть коротку форму. Контактні дані нижче позначені як placeholders і мають бути замінені на актуальні перед публікацією сайту.</p></div></section><section class="section"><div class="container contact-layout"><aside class="contact-details" aria-labelledby="contact-details-title"><p class="eyebrow">Напрямки звʼязку</p><h2 id="contact-details-title">Контактна інформація</h2><dl><div><dt>Телефон</dt><dd><a href="tel:[Номер телефону]">[Номер телефону]</a></dd></div><div><dt>Email</dt><dd><a href="mailto:[Email]">[Email]</a></dd></div><div><dt>Месенджери</dt><dd><a href="[Telegram]" aria-label="Написати у Telegram">[Telegram]</a><a href="[Viber]" aria-label="Написати у Viber">[Viber]</a></dd></div></dl><div class="contact-note"><h3>Як отримати консультацію</h3><ol><li>Надішліть короткий опис питання.</li><li>Укажіть зручний спосіб звʼязку.</li><li>Узгодьте деталі консультації у відповіді.</li></ol></div></aside>
-<section class="form-panel" id="form" aria-labelledby="form-title"><p class="eyebrow">Заявка на консультацію</p><h2 id="form-title">Розкажіть, чим допомогти</h2><p class="form-intro">Форма працює лише у вашому браузері та поки не надсилає дані на сервер. Після підключення backend або сервісу обробки заявок її можна доповнити реальним надсиланням.</p><form id="consultation-form" novalidate data-endpoint=""><div class="form-row"><div class="field"><label for="name">Імʼя <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error"><p class="field-error" id="name-error"></p></div><div class="field"><label for="contact">Телефон або email <span aria-hidden="true">*</span></label><input id="contact" name="contact" type="text" autocomplete="tel" required aria-describedby="contact-hint contact-error"><p class="field-hint" id="contact-hint">Укажіть хоча б один спосіб для відповіді.</p><p class="field-error" id="contact-error"></p></div></div><fieldset><legend>Бажаний спосіб звʼязку <span aria-hidden="true">*</span></legend><div class="radio-group"><label><input type="radio" name="contact-method" value="Телефон" required> Телефон</label><label><input type="radio" name="contact-method" value="Email"> Email</label><label><input type="radio" name="contact-method" value="Месенджер"> Месенджер</label></div><p class="field-error" id="method-error"></p></fieldset><div class="field"><label for="question">Короткий опис питання <span aria-hidden="true">*</span></label><textarea id="question" name="question" rows="5" required aria-describedby="question-error" placeholder="Наприклад: потрібна допомога з вибором онлайн-сервісу для роботи з документами."></textarea><p class="field-error" id="question-error"></p></div><button class="button" type="submit">Надіслати заявку</button><div class="form-status" id="form-status" role="status" aria-live="polite"></div></form></section></div></section></main><footer class="site-footer"><div class="container footer-inner"><p>© <span data-current-year></span> ФОП. Інформаційно-консультаційні послуги.</p><div><a href="index.html">Головна</a><a href="services.html">Послуги</a></div></div></footer></body></html>
+<html lang="uk"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакти та заявка | ЕкомКонсалт ФОП</title>
+    <meta name="description" content="Зв'яжіться для отримання інформаційної консультації: телефон, email, месенджери та форма заявки.">
+    <meta property="og:title" content="Контакти та заявка | ЕкомКонсалт ФОП">
+    <meta property="og:description" content="Залиште заявку на інформаційну консультацію у зручний спосіб.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="На головну сторінку">
+                <span class="brand-mark" aria-hidden="true">Е</span>
+                <span>ЕкомКонсалт<br><small>ФОП · Ecommerce-консультування</small></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+            <nav class="site-nav" id="site-menu" aria-label="Основна навігація">
+                <a href="index.html">Головна</a><a href="services.html">Послуги</a>
+                <a class="is-active" href="contacts.html" aria-current="page">Контакти</a>
+                <a class="button button-small" href="#form">Консультація</a>
+            </nav>
+        </div>
+    </header>
+<main id="main-content">
+    <section class="page-hero">
+        <div class="container narrow">
+            <p class="eyebrow">Контакти</p>
+            <h1>Звʼяжіться, щоб обговорити ваше питання</h1>
+            <p class="lead">Оберіть зручний канал або заповніть коротку форму. Контактні дані нижче позначені як placeholders і мають бути замінені на актуальні перед публікацією сайту.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container contact-layout">
+            <aside class="contact-details" aria-labelledby="contact-details-title">
+                <p class="eyebrow">Напрямки звʼязку</p>
+                <h2 id="contact-details-title">Контактна інформація</h2>
+                <dl><div><dt>Телефон</dt><dd><a href="tel:+380674952676">+380 67 495 26 76</a></dd></div><div><dt>Email</dt><dd><a href="mailto:serhiychukdmitriy666@gmail.com">serhiychukdmitriy666@gmail.com</a></dd></div><div><dt>Telegram</dt><dd><a href="https://t.me/serhiychukdima" target="_blank" rel="noopener noreferrer" aria-label="Написати у Telegram">@serhiychukdima</a></dd></div></dl>
+                <div class="contact-note">
+                    <h3>Як отримати консультацію</h3>
+                    <ol>
+                        <li>Надішліть короткий опис питання.</li>
+                        <li>Укажіть зручний спосіб звʼязку.</li>
+                        <li>Узгодьте деталі консультації у відповіді.</li>
+                    </ol>
+                </div>
+            </aside>
+    <section class="form-panel" id="form" aria-labelledby="form-title">
+        <p class="eyebrow">Заявка на консультацію</p>
+        <h2 id="form-title">Розкажіть, чим допомогти</h2>
+        <p class="form-intro">Форма працює лише у вашому браузері та поки не надсилає дані на сервер. Після підключення backend або сервісу обробки заявок її можна доповнити реальним надсиланням.</p>
+        <form id="consultation-form" novalidate data-endpoint="">
+            <div class="form-row">
+                <div class="field">
+                    <label for="name">Імʼя <span aria-hidden="true">*</span></label>
+                    <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                    <p class="field-error" id="name-error"></p>
+                </div>
+                <div class="field">
+                    <label for="contact">Телефон або email <span aria-hidden="true">*</span></label>
+                    <input id="contact" name="contact" type="text" autocomplete="tel" required aria-describedby="contact-hint contact-error">
+                    <p class="field-hint" id="contact-hint">Укажіть хоча б один спосіб для відповіді.</p>
+                    <p class="field-error" id="contact-error"></p>
+                </div>
+            </div>
+            <fieldset>
+                <legend>Бажаний спосіб звʼязку <span aria-hidden="true">*</span></legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="contact-method" value="Телефон" data-contact-label="Телефон" data-contact-value="+380 67 495 26 76" data-contact-href="tel:+380674952676" required> Телефон</label>
+                    <label><input type="radio" name="contact-method" value="Email" data-contact-label="Email" data-contact-value="serhiychukdmitriy666@gmail.com" data-contact-href="mailto:serhiychukdmitriy666@gmail.com"> Email</label>
+                    <label><input type="radio" name="contact-method" value="Telegram" data-contact-label="Telegram" data-contact-value="@serhiychukdima" data-contact-href="https://t.me/serhiychukdima"> Telegram</label>
+                </div>
+                <p class="selected-contact" id="selected-contact" aria-live="polite">Оберіть спосіб звʼязку, щоб побачити відповідний контакт.</p>
+                        <p class="field-error" id="method-error"></p>
+            </fieldset>
+            <div class="field">
+                <label for="question">Короткий опис питання <span aria-hidden="true">*</span></label>
+                <textarea id="question" name="question" rows="5" required aria-describedby="question-error" placeholder="Наприклад: потрібна допомога з вибором онлайн-сервісу для роботи з документами."></textarea>
+                <p class="field-error" id="question-error"></p>
+            </div>
+            <button class="button" type="submit">Надіслати заявку</button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span data-current-year></span> ФОП. Сергійчук Дмитро Богданович.</p>
+        <div>
+            <a href="index.html">Головна</a>
+            <a href="services.html">Послуги</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
