@@ -889,3 +889,55 @@ textarea {
         gap: 13px
     }
 }
+
+/* Стримані анімації появи елементів під час прокручування */
+.reveal-section,
+.reveal-title,
+.reveal-item {
+    opacity: 0;
+    will-change: opacity, transform
+}
+
+.reveal-section {
+    transform: translateY(26px);
+    transition: opacity .65s ease, transform .65s cubic-bezier(.22, 1, .36, 1)
+}
+
+.reveal-title {
+    transform: translateY(18px);
+    transition: opacity .58s ease .08s, transform .58s cubic-bezier(.22, 1, .36, 1)
+}
+
+.reveal-item {
+    transform: translateY(20px);
+    transition: opacity .52s ease var(--reveal-delay, 0ms), transform .52s cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms)
+}
+
+.reveal-section.is-visible,
+.reveal-title.is-visible,
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.card.reveal-item.is-visible,
+.service-card.reveal-item.is-visible {
+    transition-property: opacity, transform, box-shadow
+}
+
+.card.reveal-item.is-visible:hover,
+.service-card.reveal-item.is-visible:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow)
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto }
+    .reveal-section,
+    .reveal-title,
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+}

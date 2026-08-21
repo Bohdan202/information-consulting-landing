@@ -8,6 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
   }
   document.querySelectorAll('[data-current-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const revealGroups = [
+      { selector: '.section, .page-hero, .cta-section', className: 'reveal-section' },
+      { selector: '.section h2, .page-hero h1, .hero h1', className: 'reveal-title' },
+      { selector: '.card, .service-card, .direction-grid > div, .benefit-grid > div, .steps li', className: 'reveal-item' }
+    ];
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px' });
+    revealGroups.forEach(({ selector, className }) => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        element.classList.add(className);
+        if (className === 'reveal-item') element.style.setProperty('--reveal-delay', `${(index % 4) * 75}ms`);
+        observer.observe(element);
+      });
+    });
+  }
+
   const form = document.querySelector('#consultation-form');
   if (!form) return;
   const status = document.querySelector('#form-status');
